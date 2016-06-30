@@ -4,7 +4,10 @@ var path = require("path"),
 module.exports = {
     entry: {
         controller: path.resolve(__dirname, "./src/javascript/controller.js"),
-        app: path.resolve(__dirname, "./src/javascript/app.js")
+        app: [
+            path.resolve(__dirname, "./src/javascript/app.js"),
+            path.resolve(__dirname, "./src/javascript/ng-app.js")
+        ]
     },
     output: {
         path: path.resolve(__dirname, "dist"),
@@ -12,7 +15,7 @@ module.exports = {
     },
     module: {
         loaders: [
-            { test: /\.css$/, loader: "style!css"}
+            { test: /\.css$/, loader: "style!css" }
         ]
     },
     headers: {

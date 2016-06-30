@@ -21,5 +21,7 @@ SYMPHONY.remote.hello().then(function(data) {
         if (window.location.search && /cashtag/.test(window.location.search)) {
             document.getElementById("cashtag").innerHTML =  "URL parameters: " + window.location.search;
         }
+
     }.bind(this))
 }.bind(this));
+ 
