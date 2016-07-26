@@ -1,12 +1,19 @@
 var path = require("path"),
     HtmlWebpackPlugin = require('html-webpack-plugin');
 
+
 module.exports = {
     entry: {
         controller: path.resolve(__dirname, "./src/javascript/controller.js"),
         app: [
             path.resolve(__dirname, "./src/javascript/app.js"),
-            path.resolve(__dirname, "./src/javascript/ng-app.js")
+            path.resolve(__dirname, "./src/javascript/ng-app.js"),
+            path.resolve(__dirname, "./node_modules/angular/angular.js"),
+            path.resolve(__dirname, "./node_modules/angular-aria/angular-aria.js"),
+            path.resolve(__dirname, "./node_modules/angular-animate/angular-animate.js"),
+            path.resolve(__dirname, "./node_modules/angular-material/angular-material.js"),
+            path.resolve(__dirname, "./node_modules/angular-material/angular-material.css"),
+            path.resolve(__dirname, "./src/styles/main.css")
         ]
     },
     output: {
